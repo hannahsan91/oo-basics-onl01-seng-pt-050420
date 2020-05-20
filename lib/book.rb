@@ -1,37 +1,37 @@
 class Book
- 
+
   def initialize(title)
     @title = title
   end
- 
+
   def title
     @title
   end
- 
+
   def author=(author)
     @author = author
   end
- 
+
   def author
     @author
   end
- 
+
   def page_count=(num)
     @page_count = num
   end
- 
+
   def page_count
     @page_count
   end
- 
+
   def genre=(genre)
     @genre = genre
   end
- 
+
   def genre
     @genre
   end
- 
+
 end
 Run Learn now, and we get the following:
 
@@ -48,44 +48,44 @@ Like I said above, OOP gives us the opportunity to encapsulate both data and beh
 How do we give our books a behavior? Well, we give them methods that do stuff! So, let's give our book a turn_page method:
 
 # book.rb
- 
+
 class Book
- 
+
   def initialize(title)
     @title = title
   end
- 
+
   def title
     @title
   end
- 
+
   def author=(author)
     @author = author
   end
- 
+
   def author
     @author
   end
- 
+
   def page_count=(num)
     @page_count = num
   end
- 
+
   def page_count
     @page_count
   end
- 
+
   def genre=(genre)
     @genre = genre
   end
- 
+
   def genre
     @genre
   end
- 
+
   def turn_page
   end
- 
+
 end
 A quick run of the tests gives us this:
 
@@ -97,46 +97,46 @@ A quick run of the tests gives us this:
      # ./spec/01_book_spec.rb:35:in `block (3 levels) in <top (required)>'
 It looks like our turn_page method doesn't really need to do much aside from print something to the screen. So, to make the test pass, let's add a puts statement to our turn_page method:
 
- 
+
 # book.rb
- 
+
 class Book
   def initialize(title)
     @title = title
   end
- 
+
   def title
     @title
   end
- 
+
   def author=(author)
     @author = author
   end
- 
+
   def author
     @author
   end
- 
+
   def page_count=(num)
     @page_count = num
   end
- 
+
   def page_count
     @page_count
   end
- 
+
   def genre=(genre)
     @genre = genre
   end
- 
+
   def genre
     @genre
   end
- 
+
   def turn_page
     puts "Flipping the page...wow, you read fast!"
   end
- 
+
 end
 
 book = Book.new("Some Title")
