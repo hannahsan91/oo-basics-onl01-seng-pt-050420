@@ -99,7 +99,6 @@ It looks like our turn_page method doesn't really need to do much aside from pri
 
 
 # book.rb
-
 class Book
   def initialize(title)
     @title = title
